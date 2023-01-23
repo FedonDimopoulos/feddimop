@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_23_141123) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_23_141231) do
   create_table "properties", force: :cascade do |t|
     t.string "title"
     t.string "area"
@@ -18,6 +18,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_23_141123) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "type_id", null: false
+    t.index ["type_id"], name: "index_properties_on_type_id"
   end
 
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "properties", "types"
 end
