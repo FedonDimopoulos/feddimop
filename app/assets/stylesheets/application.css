@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.new_property_form {
+	box-sizing: border-box;
+	width: 500px;
+}
+
+.new_property_form div {
+	box-sizing: border-box;
+	padding: 5px 0;
+}
+
+.new_property_form label {
+	box-sizing: border-box;
+	display: block;
+	padding: 5px 0;
+}
+
+.new_property_form input[type='text'], .new_property_form select, .new_property_form textarea {
+	box-sizing: border-box;
+	width: 100%;
+}
+
