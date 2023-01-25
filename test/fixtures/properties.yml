@@ -2,12 +2,16 @@
 
 one:
   title: MyString
-  area: MyString
+  area_id: MyString
+  area_description: MyString
+  type_id: 1
   price: 1
   description: MyText
 
 two:
   title: MyString
-  area: MyString
+  area_id: MyString
+  area_description: MyString
+  type_id: 2
   price: 1
   description: MyText
