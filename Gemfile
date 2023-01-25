@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Gems used for the area autoselect
+gem 'jquery-rails'
+gem 'jquery-ui-rails'

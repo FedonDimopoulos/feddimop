@@ -12,7 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery-ui
  */
+
 
 .new_property_form {
 	box-sizing: border-box;
