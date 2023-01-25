@@ -13,6 +13,10 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+    @property.title = 'Classified title up to 155 chars'
+    @property.area_description = 'Type in the property\'s area'
+    @property.price = 'Amount'
+    @property.description = 'Type here'
   end
 
   # GET /properties/1/edit
