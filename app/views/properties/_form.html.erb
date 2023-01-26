@@ -13,12 +13,19 @@
 
   <div>
     <%= form.label :title %>
-    <%= form.text_field :title, size: "155", value: property.title, onclick: "document.getElementById('property_title').value = '';" %><br />
+    <%= form.text_field :title, size: "155", value: property.title, onclick: "document.getElementById('property_title').value = '';" %>
   </div>
 
   <div>
   	<%= form.label :type, "Type" %>
-    <%= form.collection_select :type_id, Type.all, :id, :name, { prompt: "Select type" } %><br />
+    <%= form.collection_select :type_id, Type.all, :id, :name, { prompt: "Select type" } %>
+  </div>
+  
+  <div>
+    <%= form.label :building, "Building type" %>
+    <div class='building_type'>
+      <%= form.collection_radio_buttons :building_id, Building.all, :id, :name %>
+    </div>
   </div>
   
   <div>

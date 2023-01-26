@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_26_194320) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_26_200851) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,6 +39,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_194320) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "buildings", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string "title"
     t.integer "price"
@@ -49,6 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_194320) do
     t.string "area_id"
     t.string "area_description"
     t.integer "bathrooms"
+    t.integer "building_id", null: false
+    t.index ["building_id"], name: "index_properties_on_building_id"
     t.index ["type_id"], name: "index_properties_on_type_id"
   end
 
@@ -60,5 +68,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_194320) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "properties", "buildings"
   add_foreign_key "properties", "types"
 end

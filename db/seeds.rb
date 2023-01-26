@@ -10,3 +10,8 @@ Type.create(name: "Rent")
 Type.create(name: "Buy")
 Type.create(name: "Exchange")
 Type.create(name: "Donation")
+
+Building.create(name: "House")
+Building.create(name: "Duplex")
+Building.create(name: "Apartment")
+Building.create(name: "Block")

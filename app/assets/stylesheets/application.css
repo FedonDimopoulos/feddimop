@@ -37,3 +37,11 @@
 	width: 100%;
 }
 
+.new_property_form .building_type {
+	overflow: auto;
+	padding: 0;
+}
+
+.building_type * {
+	float: left;
+}

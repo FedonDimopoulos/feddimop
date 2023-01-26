@@ -8,6 +8,7 @@ one:
   price: 1
   description: MyText
   bathrooms: MyString
+  building_id: 1
 
 two:
   title: MyString
@@ -17,3 +18,4 @@ two:
   price: 1
   description: MyText
   bathrooms: MyString
+  building_id: 2
