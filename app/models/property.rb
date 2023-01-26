@@ -6,4 +6,6 @@ class Property < ApplicationRecord
   validates :area_description, presence: true
   validates :price, :numericality => {:only_integer => true}
   # Description is optional therefore not validated
+
+  has_many_attached :images
 end
