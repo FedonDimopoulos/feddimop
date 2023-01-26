@@ -3,6 +3,11 @@
     <strong>Title:</strong>
     <%= property.title %>
   </p>
+  
+  <p>
+    <strong>Type:</strong>
+    <%= property.type.name %>
+  </p>
 
   <p>
     <strong>Area:</strong>
@@ -12,6 +17,13 @@
   <p>
     <strong>Price:</strong>
     <%= property.price %>
+  </p>
+
+  <p>
+    <strong>Images:</strong>
+    <% property.images.each do |image| %>
+      <%= link_to image_tag(image, style: 'width: 150px; height: 150px;'), image %>
+    <% end %>
   </p>
 
   <p>
