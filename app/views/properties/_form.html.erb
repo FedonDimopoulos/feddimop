@@ -33,6 +33,11 @@
   </div>
     
   <div>
+    <%= form.label :bathrooms, "Bathrooms" %>
+    <%= form.text_field :bathrooms, value: property.bathrooms, onclick: "document.getElementById('property_bathrooms').value = '';" %>
+  </div>
+    
+  <div>
     <%= form.label :image, "Upload images" %>
     <% property.images.each do |image| %>
       <%= link_to image_tag(image, style: 'width: 150px; height: 150px;'), image %>

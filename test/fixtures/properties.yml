@@ -7,6 +7,7 @@ one:
   type_id: 1
   price: 1
   description: MyText
+  bathrooms: MyString
 
 two:
   title: MyString
@@ -15,3 +16,4 @@ two:
   type_id: 2
   price: 1
   description: MyText
+  bathrooms: MyString

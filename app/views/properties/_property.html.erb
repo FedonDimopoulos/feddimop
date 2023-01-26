@@ -20,6 +20,11 @@
   </p>
 
   <p>
+    <strong>Bathrooms:</strong>
+    <%= property.bathrooms %>
+  </p>
+
+  <p>
     <strong>Images:</strong>
     <% property.images.each do |image| %>
       <%= link_to image_tag(image, style: 'width: 150px; height: 150px;'), image %>
