@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_26_200851) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_27_122300) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -43,6 +43,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_200851) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "levels_properties", id: false, force: :cascade do |t|
+    t.integer "level_id", null: false
+    t.integer "property_id", null: false
+    t.index ["level_id", "property_id"], name: "index_levels_properties_on_level_id_and_property_id"
+    t.index ["property_id", "level_id"], name: "index_levels_properties_on_property_id_and_level_id"
   end
 
   create_table "properties", force: :cascade do |t|

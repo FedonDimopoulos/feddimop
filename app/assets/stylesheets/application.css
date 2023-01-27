@@ -38,10 +38,14 @@
 }
 
 .new_property_form .building_type {
-	overflow: auto;
 	padding: 0;
 }
 
-.building_type * {
-	float: left;
+.levels label, .building_type label {
+	display: inline;
+}
+
+.levels label::after, .building_type label::after {
+	content: "\A";
+	white-space: pre;
 }

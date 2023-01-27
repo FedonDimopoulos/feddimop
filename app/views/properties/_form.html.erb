@@ -29,6 +29,13 @@
   </div>
   
   <div>
+    Levels
+    <div class='levels'>
+      <%= form.collection_check_boxes(:level_ids, Level.all, :id, :name) %>
+    </div>
+  </div>
+  
+  <div>
     <%= form.label :area_description, 'Area' %>
     <%= form.text_field :area_description, value: property.area_description, onclick: "document.getElementById('property_area_description').value = '';" %>
     <%= form.hidden_field :area_id %>

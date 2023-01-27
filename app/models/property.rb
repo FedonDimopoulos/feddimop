@@ -1,7 +1,8 @@
 class Property < ApplicationRecord
   belongs_to :type  # this validates presence of Type
   belongs_to :building  # this validates presence of Building
-  
+  has_and_belongs_to_many :levels
+
   validates :title, presence: true
   # Area_id is not validated because a user's typed-in area might not match one of the existing areas
   validates :area_description, presence: true
