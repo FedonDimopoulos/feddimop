@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :title %>
-    <%= form.text_field :title, size: "155", value: property.title, onclick: "document.getElementById('property_title').value = '';" %>
+    <%= form.text_field :title, size: "155", value: property.title, placeholder: 'Classified title up to 155 chars' %>
   </div>
 
   <div>
@@ -39,18 +39,18 @@
   
   <div>
     <%= form.label :area_description, 'Area' %>
-    <%= form.text_field :area_description, value: property.area_description, onclick: "document.getElementById('property_area_description').value = '';" %>
+    <%= form.text_field :area_description, value: property.area_description, placeholder: 'Type in the property\'s area' %>
     <%= form.hidden_field :area_id %>
   </div>
 
   <div>
     <%= form.label :price, "Price in Euros" %>
-    <%= form.text_field :price, value: property.price, onclick: "document.getElementById('property_price').value = '';" %>
+    <%= form.text_field :price, value: property.price, placeholder: 'Amount' %>
   </div>
     
   <div>
     <%= form.label :bathrooms, "Bathrooms" %>
-    <%= form.text_field :bathrooms, value: property.bathrooms, onclick: "document.getElementById('property_bathrooms').value = '';" %>
+    <%= form.text_field :bathrooms, value: property.bathrooms, placeholder: 'e.g.: 2' %>
   </div>
     
   <div>
@@ -63,7 +63,7 @@
 
   <div>
     <%= form.label :description, "Extra description" %>
-    <%= form.text_area :description, size: "60x12", value: property.description,  onclick: "document.getElementById('property_description').value = '';" %>
+    <%= form.text_area :description, size: "60x12", value: property.description, placeholder: 'Type here' %>
   </div>
 
   <div>
