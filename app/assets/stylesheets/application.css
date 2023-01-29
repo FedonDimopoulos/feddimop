@@ -18,7 +18,7 @@
 
 .new_property_form {
 	box-sizing: border-box;
-	width: 500px;
+	width: 100%;
 }
 
 .new_property_form div {
@@ -49,3 +49,32 @@
 	content: "\A";
 	white-space: pre;
 }
+
+.row {
+	margin: 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.new_property_form input[type='radio'], .new_property_form input[type='checkbox'] {
+	margin-right: 5px;
+}
+
+/* For mobile phones: */
+.container {
+	width: 300px;  
+}
+[class*="col-"] {
+	width: 100%;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 320px) { .container { width: 320px; } }
+@media only screen and (min-width: 480px) { .container { width: 480px; } }
+@media only screen and (min-width: 600px) { .container { width: 500px; } }
+@media only screen and (min-width: 300px) {
+	.col-md-6 {width: 50%;}
+}
+

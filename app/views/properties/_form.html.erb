@@ -21,17 +21,19 @@
     <%= form.collection_select :type_id, Type.all, :id, :name, { prompt: "Select type" } %>
   </div>
   
-  <div>
-    <%= form.label :building, "Building type" %>
-    <div class='building_type'>
-      <%= form.collection_radio_buttons :building_id, Building.all, :id, :name %>
+  <div class='row'>
+    <div class='col-md-6 float-left'>
+      <%= form.label :building, "Building type" %>
+      <div class='building_type'>
+        <%= form.collection_radio_buttons :building_id, Building.all, :id, :name %>
+      </div>
     </div>
-  </div>
-  
-  <div>
-    Levels
-    <div class='levels'>
-      <%= form.collection_check_boxes(:level_ids, Level.all, :id, :name) %>
+    
+    <div class='col-md-6'>
+      <%= form.label :levels, 'Levels' %>
+      <div class='levels'>
+        <%= form.collection_check_boxes(:level_ids, Level.all, :id, :name) %>
+      </div>
     </div>
   </div>
   
